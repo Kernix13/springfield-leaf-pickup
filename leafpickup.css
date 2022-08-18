@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -44,8 +46,12 @@ ol > li {
   padding-left: 0.5em;
 }
 
-ol > li:nth-child(4)::after, ol > li:nth-child(7)::after, ol > li:nth-child(11)::after, ol > li:nth-child(14)::after, ol > li:nth-child(18)::after {
-  content: '';
+ol > li:nth-child(4)::after,
+ol > li:nth-child(7)::after,
+ol > li:nth-child(11)::after,
+ol > li:nth-child(14)::after,
+ol > li:nth-child(18)::after {
+  content: "";
   display: block;
   height: 3px;
   width: 61.8%;
@@ -54,12 +60,18 @@ ol > li:nth-child(4)::after, ol > li:nth-child(7)::after, ol > li:nth-child(11):
 }
 
 .update-warning {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: red;
 }
 
 span > .black {
   color: #000;
+}
+
+.dots,
+.text {
+  display: inline-block;
+  padding-right: 1rem;
 }
 
 @media (min-width: 25.625em) {
@@ -80,13 +92,15 @@ span > .black {
 }
 
 @media (min-width: 47.625em) {
-
   ol > li {
     font-size: 1.25rem;
   }
 
-  ol > li:nth-child(4)::after, ol > li:nth-child(7)::after, ol > li:nth-child(11)::after, ol > li:nth-child(14)::after, ol > li:nth-child(18)::after {
+  ol > li:nth-child(4)::after,
+  ol > li:nth-child(7)::after,
+  ol > li:nth-child(11)::after,
+  ol > li:nth-child(14)::after,
+  ol > li:nth-child(18)::after {
     width: 40%;
   }
 }
-
