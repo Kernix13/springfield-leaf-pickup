@@ -20,4 +20,4 @@ I had to make assumptions because Springfield Township never replied to my email
 1. That the two holiday weeks, week 2 and 4, have 1 less precinct that the other weeks, and that remains constant.
 1. That the number of weeks do not change, no increase or decrease.
 
-If 1 or more of those assumptions are wrong then this will need output the correct schedule. Based on the 2 PDF files I found online and some logic, I think my assumptions are correct.
+If 1 or more of those assumptions are wrong then this will _NOT_ output the correct schedule. Based on the 2 PDF files I found online and some logic, I think my assumptions are correct.
