@@ -8,7 +8,9 @@ const startYr = 2021;
   into account the 2 holiday weeks that only have 3 vs 4 precincts.
   The following year would have to do that twice, ... 
 */
+const headerYear = document.getElementById("header-year");
 const currYear = new Date().getFullYear();
+headerYear.textContent = currYear + " LEAF SCHEDULE";
 
 // Get day of week for November 1st for the current year
 const d = new Date();

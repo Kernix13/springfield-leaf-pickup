@@ -42,6 +42,10 @@ ol > li {
   margin-left: 1em;
 }
 
+ul > li {
+  font-size: 1.25rem;
+}
+
 .precinct {
   padding-left: 0.5em;
 }
@@ -72,6 +76,13 @@ span > .black {
 .text {
   display: inline-block;
   padding-right: 1rem;
+}
+
+.final-text {
+  font-size: 1.25rem;
+}
+.end {
+  margin: 4rem auto;
 }
 
 @media (min-width: 25.625em) {

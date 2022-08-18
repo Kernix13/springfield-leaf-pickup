@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./leafpickup.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./leafpickup.css" />
     <title>Springfield Twp Leaf Pickup</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section>
-        <div class="container">
-            <h1>2021 LEAF SCHEDULE</h1>
-            <p>LISTED BELOW IS THE 2021 LEAF SCHEDULE. EVERY YEAR TWO PRECINCTS ARE ROTATED FROM THE BOTTOM OF THE LIST
-                TO THE TOP OF THE SCHEDULE. ROTATING THE SCHEDULE EACH YEAR ASSURES THAT ONE PRECINCT IS NOT FIRST OR
-                LAST EVERY YEAR.</p>
-            <!-- Is this correct? Precinct = Zone + Ward? I added this, feel free to remove it -->
-            <p>*Precinct = Zone + Ward</p>
-            <p>The numbers below are a combination of the Zone number and Ward number. For example, Precinct 4-1 is Zone
-                4 and Ward 1, or 4-1.</p>
-            <h4 id="update_warning" class="update-warning"></h4>
-            <div class="main">
-                <ol id="weekly_schedule"></ol>
-            </div>
-
+      <div class="container">
+        <h1 id="header-year"></h1>
+        <p>Below is the current year leaf collection schedule. Every year 2 precincts are rotated from the bottom of the schedule to the top of the schedule. Rotating the schedule each year ensures that no precincts are always the first or last each year.</p>
+        <!-- Is this correct? Precinct = Zone + Ward? I added this, feel free to remove it -->
+        <p>*Precinct = Zone + Ward</p>
+        <p>The numbers below are a combination of the Zone number and Ward number. For example, Precinct 4-1 is Zone 4 and Ward 1, or 4-1.</p>
+        <h4 id="update_warning" class="update-warning"></h4>
+        <div class="main">
+          <ol id="weekly_schedule"></ol>
         </div>
-
+      </div>
+    </section>
+    <section>
+      <div class="container end">
+        <h2>Assumptions made in creating this schedule</h2>
+        <p class="final-text">My name is Jim Kernicky and I have a web design business. I also live in Springfield and created this schedule app for myself. I contacted the township via email but never heard back from them on some of my questions. Here are the assumptions I had to make to create this schedule:</p>
+        <ul>
+          <li>The 1st week of leaf pickup is the week of the first Monday in November.</li>
+          <li>The # of precints do not increase or decrease.</li>
+          <li>The order that precincts follow in the schedule is constant and does not change.</li>
+          <li>The # of precincts per week does not change: 3 precincts for the two holiday weeks, 4 precincts for the other weeks.</li>
+          <li>The # of weeks of leaf pickup (currently 6) does not change.</li>
+        </ul>
+        <p class="final-text"><a href="https://kernixwebdesign.com/contact/" target="_blank">Contact me</a> if you know that 1 or more of those assumptions are wrong.</p>
+      </div>
     </section>
 
     <script src="./leafpickup.js"></script>
-</body>
-
+  </body>
 </html>

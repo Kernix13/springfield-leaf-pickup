@@ -16,10 +16,10 @@ I had to make assumptions because Springfield Township never replied to my email
 
 1. The 1st week of leaf pickup is the week of the first Monday in November. But what if November 1st is on a Tuesday? Will the 1st week start on Monday October 31st or the follwoing week on Monday November 7th?
 1. The number of precints do not increase or decrease.
-1. The order that precincts follow in the schedule do not change.
+1. The order that precincts follow in the schedule is constant and does not change.
 1. The number of precincts per week does not change.
 1. The two holiday weeks (week 2 and 4) only have 3 precinct while the other weeks have 4.
-1. That the number of weeks of leaf pickup (currently 6) does not change.
+1. The number of weeks of leaf pickup (currently 6) does not change.
 
 If 1 or more of those assumptions are wrong then this will _NOT_ output the correct schedule. Based on the 2 PDF files I found online and some logic, I think my assumptions are correct.
 
@@ -31,9 +31,8 @@ Take a look at the [commit](https://github.com/Kernix13/springfield-leaf-pickup/
 
 1. Changed main `for` loop to a `map()` function.
 1. Changed 18 `let` keywords to `const`
-1. No functions are in this??? Except...
 1. Converted the "check the current year and update the startYr variable" code block into the function `yearCheck(yr)`
 1. Created function `findFirstMonday(day)` and added the switch statement inside
-1. Created the function `currYrSched(num)` to get the current years schedule
-1. Created the function `outputSchedule(arr)` outputs the `<li>` items based on the weekely indices.
+1. Created the function `currYrSched(num)` and added inside the code that gets the current years schedule.
+1. Created the function `outputSchedule(arr)` and added the code that outputs the `<li>` items based on the weekely indices.
 1. Removed all `console.log` statements.
