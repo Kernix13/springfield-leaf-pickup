@@ -1,0 +1,92 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.main {
+  margin: 2em 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-position: inside;
+}
+
+ol > li {
+  font-size: 0.9375rem;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+
+.precinct {
+  padding-left: 0.5em;
+}
+
+ol > li:nth-child(4)::after, ol > li:nth-child(7)::after, ol > li:nth-child(11)::after, ol > li:nth-child(14)::after, ol > li:nth-child(18)::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 61.8%;
+  margin: 0.5em auto 0;
+  border-bottom: 1px solid rgb(0, 85, 136);
+}
+
+.update-warning {
+  font-family: 'Courier New', Courier, monospace;
+  color: red;
+}
+
+span > .black {
+  color: #000;
+}
+
+@media (min-width: 25.625em) {
+  ol > li {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 33.75em) {
+  .text {
+    text-transform: uppercase;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 47.625em) {
+
+  ol > li {
+    font-size: 1.25rem;
+  }
+
+  ol > li:nth-child(4)::after, ol > li:nth-child(7)::after, ol > li:nth-child(11)::after, ol > li:nth-child(14)::after, ol > li:nth-child(18)::after {
+    width: 40%;
+  }
+}
+
