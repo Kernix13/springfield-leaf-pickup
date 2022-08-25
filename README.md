@@ -1,8 +1,8 @@
 # springfieldleafpickup
 
 ![GitHub language count](https://img.shields.io/github/languages/count/Kernix13/springfield-leaf-pickup?style=flat-square)
-GitHub top language:
 ![GitHub top language](https://img.shields.io/github/languages/top/Kernix13/springfield-leaf-pickup?style=flat-square)
+![GitHub top language](https://img.shields.io/github/directory-file-count/Kernix13/springfield-leaf-pickup?style=flat-square)
 
 This is a simple JavaScript application to calculate the schedule each year for leaf pickup in Springfield Township, Pennsylvania.
 
