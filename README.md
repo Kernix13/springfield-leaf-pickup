@@ -20,7 +20,7 @@ I contacted the township about a version of this on [CodePen](https://codepen.io
 
 I had to make assumptions because Springfield Township never replied to my email:
 
-1. The 1st week of leaf pickup is the week of the first Monday in November. But what if November 1st is on a Tuesday? Will the 1st week start on Monday October 31st or the follwoing week on Monday November 7th?
+1. The 1st week of leaf pickup is the week of the first Monday in November. But what if November 1st is on a Tuesday such as 2022? Will the 1st week start on Monday October 31st or the follwoing week on Monday November 7th? YES, for 2022! I need to make a change to fix the date calculation
 1. The number of precints do not increase or decrease.
 1. The order that precincts follow in the schedule is constant and does not change.
 1. The number of precincts per week does not change.
