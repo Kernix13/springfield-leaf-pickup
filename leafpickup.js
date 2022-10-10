@@ -62,13 +62,13 @@ function findFirstMonday(day) {
       weekOne = new Date(`10/30/${year}`);
       break;
     case 4:
-      weekOne = new Date(`10/29/${year}`);
+      weekOne = new Date(`11/5/${year}`);
       break;
     case 5:
-      weekOne = new Date(`10/28/${year}`);
+      weekOne = new Date(`11/4/${year}`);
       break;
     case 6:
-      weekOne = new Date(`10/27/${year}`);
+      weekOne = new Date(`11/3/${year}`);
   }
   return weekOne;
 }
