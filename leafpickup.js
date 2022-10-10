@@ -35,7 +35,7 @@ const schedules = [
   ["4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2"]
 ];
 
-// check the current year and update the startYr variable. This will create an accurate schedule until 2042, but will break the page starting on 1/1/2043.
+// check the current year and update the startYr variable. This will create an accurate schedule until 2043, but will break the page starting on 1/1/2044.
 function yearCheck(yr) {
   if (yr < 2033) {
     const startYr = 2022;
@@ -158,7 +158,7 @@ const currentDate = new Date();
 const updateWarning = document.getElementById("update_warning");
 
 if (currentDate > updateDate) {
-  updateWarning.innerHTML = '<span>If you see this message and it is 2032, then the schedule below is WRONG! You have to update the <em class="black">date</em> variable in <em class="black">leafpickup.js</em>. On line 1 of that file you will see: <em class="black">const startYr = 2021</em>. Change the year <em class="black">2021</em> to <em class="black">2032</em> for the schedule to be accurate for the next 11 years. In late <em class="black">2042</em> change it to <em class="black">2043</em> for the next 11 years, and so on... To make this warning message disappear, change the date in the variable at the bottom of the page (<em class="black">const updateDate = new Date(`12/01/21`)</em>) from <em class="black">12/01/31</em> to <em class="black">12/01/42</em>.</span>';
+  updateWarning.innerHTML = '<span>If you see this message and it is 2032, then the schedule below is WRONG! You have to update the <em class="black">date</em> variable in <em class="black">leafpickup.js</em>. On line 1 of that file you will see: <em class="black">const startYr = 2022</em>. Change the year <em class="black">2022</em> to <em class="black">2032</em> for the schedule to be accurate for the next 11 years. In late <em class="black">2043</em> change it to <em class="black">2044</em> for the next 11 years, and so on... To make this warning message disappear, change the date in the variable at the bottom of the page (<em class="black">const updateDate = new Date(`12/01/22`)</em>) from <em class="black">12/01/32</em> to <em class="black">12/01/43</em>.</span>';
 }
 
 /*
@@ -172,4 +172,5 @@ VARIABLES THAT WILL BREAK THE OUTPUT IF THEY CHANGE:
   1. startYr - needs to be changed in year 11 for:
   2. yearDiff - this variable will be greater than 10 starting in 2032, therefore startYr has to change or use a loop to subtract 11 from yearDiff and recalculate it to get the correct schedules index
   3. updateDate - depends on the above 2 vars unless a loop is created for yearDiff. If that is done then the warning output below can be deleted.
+  NOTE: I need to double-check all the dates in the warning code and message.
 */
