@@ -1,6 +1,6 @@
 // 2022 PDF: https://www.springfielddelco.org/wp-content/uploads/2022/09/2022-Leaf-Schedule.pdf
 
-const startYr = 2021;
+const startYr = 2022;
 
 /* 
   I'm not going to use currYear to create a function 
@@ -22,7 +22,6 @@ const novFirstDay = new Date(currentNovFirst).getDay();
 
 // The 11 year cycle of schedules
 const schedules = [
-  ["4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2"],
   ["2-2", "1-2", "4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1"],
   ["5-2", "6-1", "2-2", "1-2", "4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1"],
   ["3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3"],
@@ -32,60 +31,50 @@ const schedules = [
   ["3-3", "7-7", "5-7", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2"],
   ["1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1", "7-2", "5-1", "6-2", "2-1"],
   ["6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1", "7-2", "5-1"],
-  ["7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1"]
+  ["7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2", "4-1", "3-1"],
+  ["4-1", "3-1", "7-2", "5-1", "6-2", "2-1", "1-3", "4-2", "3-3", "7-3", "5-3", "6-4", "6-3", "2-3", "1-1", "4-3", "3-2", "7-1", "5-2", "6-1", "2-2", "1-2"]
 ];
 
 // check the current year and update the startYr variable. This will create an accurate schedule until 2042, but will break the page starting on 1/1/2043.
 function yearCheck(yr) {
-  if (yr < 2032) {
-    const startYr = 2021;
-  } else if (yr >= 2032 && yr <= 2042) {
-    const startYr = 2032;
+  if (yr < 2033) {
+    const startYr = 2022;
+  } else if (yr >= 2033 && yr <= 2043) {
+    const startYr = 2033;
   }
   return startYr;
 }
 yearCheck(year);
 
-// For the current year, find the day of the week for the 1st of Nov then return the date for the first Monday in November
+// For the current year, find the day of the week for the 1st of Nov then return the date for the first Monday in November. But it really depends on where Veteran's day (11/11) falls because that is week 2. If Veteran's day is on Sat or Sun, where is the municipal holiday - Friday or Monday?
 function findFirstMonday(day) {
   switch (day) {
     case 0:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`11/2/${year}`);
       break;
     case 1:
       weekOne = new Date(`11/1/${year}`);
       break;
     case 2:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`10/31/${year}`);
       break;
     case 3:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`10/30/${year}`);
       break;
     case 4:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`10/29/${year}`);
       break;
     case 5:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`10/28/${year}`);
       break;
     case 6:
-      weekOne = new Date(`11/1/${year}`);
+      weekOne = new Date(`10/27/${year}`);
   }
   return weekOne;
 }
 findFirstMonday(novFirstDay);
 
 /* CALCULATING AND FORMATTING THE MONDAY DATES FOR THE 6 WEEKS */
-function setWeeks() {
-  const week1 = new Date(),
-    week2 = new Date(),
-    week3 = new Date(),
-    week4 = new Date(),
-    week5 = new Date(),
-    week6 = new Date();
-  const weeks = [week1, week2, week3, week4, week5, week6];
-  return weeks;
-}
-
 const week1 = new Date(),
   week2 = new Date(),
   week3 = new Date(),
@@ -164,7 +153,7 @@ function outputSchedule(arr) {
 outputSchedule(currentYearSchedule);
 
 /* WARNING MESSAGE FOR DATE CHANGES IN LATE 2031 - change 12/01/31 to 12/01/21 to see it */
-const updateDate = new Date(`12/01/31`);
+const updateDate = new Date(`12/01/32`);
 const currentDate = new Date();
 const updateWarning = document.getElementById("update_warning");
 
